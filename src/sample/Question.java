@@ -12,9 +12,9 @@ public class Question {
     private String answer;
     private String question;
 
-    Question(){
+    Question(int questionNo){
         try {
-            List<String> allLines = Files.readAllLines(Paths.get("./src/assets/question.txt"));
+            List<String> allLines = Files.readAllLines(Paths.get("./src/assets/question"+questionNo+".txt"));
             this.answer = allLines.get(4);
             this.question = allLines.get(0);
             this.answers.add(allLines.get(1));

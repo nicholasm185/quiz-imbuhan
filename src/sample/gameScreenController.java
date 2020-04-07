@@ -26,7 +26,7 @@ public class gameScreenController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.question = new Question();
+        this.question = new Question(Main.questionNumber);
         List<String> ansList = this.question.getAnswers();
         Collections.shuffle(ansList);
 
@@ -36,6 +36,7 @@ public class gameScreenController implements Initializable {
         ch4.setText(ansList.get(3));
 
         questionLabel.setText(this.question.getQuestion());
+        Main.questionNumber += 1;
 
     }
 
@@ -48,33 +49,58 @@ public class gameScreenController implements Initializable {
         }
     }
 
+    public void goToNext(){
+        if (Main.questionNumber <= Main.numQuestions){
+            try {
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("gameScreen.fxml"));
+                gamePane.getChildren().setAll(pane);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else{
+            try {
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+                gamePane.getChildren().setAll(pane);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public void klikch2(){
         if (ch2.getText().equals(this.question.getAnswer())){
             System.out.println("correct answer");
         }else {
             System.out.println("wrong answer");
         }
+        goToNext();
     }
+
     public void klikch3(){
         if (ch3.getText().equals(this.question.getAnswer())){
             System.out.println("correct answer");
         }else {
             System.out.println("wrong answer");
         }
+        goToNext();
     }
+
     public void klikch4(){
         if (ch4.getText().equals(this.question.getAnswer())){
             System.out.println("correct answer");
         }else {
             System.out.println("wrong answer");
         }
+        goToNext();
     }
+
     public void klikch1(){
         if (ch1.getText().equals(this.question.getAnswer())){
             System.out.println("correct answer");
         }else {
             System.out.println("wrong answer");
         }
+        goToNext();
     }
 
 }
