@@ -30,6 +30,7 @@ public class gameScreenController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.question = new Question(Main.questionNumber);
+        questionLabel.setText(this.question.getQuestion());
         if(this.question.getType() == 1){
             List<String> ansList = this.question.getAnswers();
             Collections.shuffle(ansList);
@@ -38,9 +39,6 @@ public class gameScreenController implements Initializable {
             ch2.setText(ansList.get(1));
             ch3.setText(ansList.get(2));
             ch4.setText(ansList.get(3));
-
-            questionLabel.setText(this.question.getQuestion());
-
 
             ch1.setVisible(true);
             ch2.setVisible(true);

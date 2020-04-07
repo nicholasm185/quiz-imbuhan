@@ -7,12 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.util.Objects;
 
 public class Main extends Application {
 
 //    untuk menyimpan skor;
     public static int skor;
-    public static int numQuestions = 2;
+    public static int numQuestions = 10;
     public static int questionNumber = 1;
 
     @Override
@@ -26,6 +27,9 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+        numQuestions = Objects.requireNonNull(new File("./src/assets").list()).length;
+        System.out.println("no of questions: " + numQuestions);
+
         launch(args);
     }
 }
