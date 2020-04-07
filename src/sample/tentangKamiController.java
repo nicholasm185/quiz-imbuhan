@@ -11,10 +11,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class gameScreenController implements Initializable {
+public class tentangKamiController implements Initializable {
 
-    @FXML private AnchorPane gamePane;
-    @FXML private Button kembali;
+    @FXML
+    private AnchorPane tentangPane;
+    @FXML
+    private Button kembali;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -24,7 +26,7 @@ public class gameScreenController implements Initializable {
     public void klikKembali(ActionEvent event){
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
-            gamePane.getChildren().setAll(pane);
+            tentangPane.getChildren().setAll(pane);
         } catch (IOException e) {
             e.printStackTrace();
         }

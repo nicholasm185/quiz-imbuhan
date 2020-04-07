@@ -11,9 +11,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class gameScreenController implements Initializable {
+public class bantuanController implements Initializable {
 
-    @FXML private AnchorPane gamePane;
+    @FXML private AnchorPane bantuanPane;
     @FXML private Button kembali;
 
     @Override
@@ -24,10 +24,11 @@ public class gameScreenController implements Initializable {
     public void klikKembali(ActionEvent event){
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
-            gamePane.getChildren().setAll(pane);
+            bantuanPane.getChildren().setAll(pane);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 }

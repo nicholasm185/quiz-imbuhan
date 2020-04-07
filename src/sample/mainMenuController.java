@@ -31,4 +31,22 @@ public class mainMenuController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    public void klikTentangKami(ActionEvent event){
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("tentangKamiScreen.fxml"));
+            rootPane.getChildren().setAll(pane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void klikBantuan(ActionEvent event){
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("bantuanScreen.fxml"));
+            rootPane.getChildren().setAll(pane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
