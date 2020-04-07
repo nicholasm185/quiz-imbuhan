@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -19,6 +20,8 @@ public class gameScreenController implements Initializable {
     @FXML private Button ch2;
     @FXML private Button ch3;
     @FXML private Button ch4;
+    @FXML private Label questionLabel;
+
     @FXML private Question question;
 
     @Override
@@ -31,6 +34,8 @@ public class gameScreenController implements Initializable {
         ch2.setText(ansList.get(1));
         ch3.setText(ansList.get(2));
         ch4.setText(ansList.get(3));
+
+        questionLabel.setText(this.question.getQuestion());
 
     }
 

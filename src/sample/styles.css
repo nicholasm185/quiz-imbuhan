@@ -36,6 +36,14 @@
     -fx-font-size: 14pt;
 }
 
+.question{
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14pt;
+}
+
 .button:hover{
     -fx-border-color: -fx-secondary;
     -fx-background-color: -fx-secondary;
