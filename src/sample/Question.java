@@ -26,8 +26,7 @@ public class Question {
                 this.answers.add(allLines.get(3));
                 this.answers.add(allLines.get(4));
                 this.answers.add(allLines.get(5));
-            }
-            if (this.type == 2){
+            } else if (this.type == 2 || this.type == 3){
                 this.answer = allLines.get(2);
             }
 

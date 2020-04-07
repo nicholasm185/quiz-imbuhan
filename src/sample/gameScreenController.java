@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -16,6 +17,8 @@ public class gameScreenController implements Initializable {
 
     @FXML public Button benar;
     @FXML public Button salah;
+    @FXML public TextField jawaban;
+    @FXML public Button ajukanJawaban;
     @FXML private AnchorPane gamePane;
     @FXML private Button kembali;
     @FXML private Button ch1;
@@ -54,6 +57,11 @@ public class gameScreenController implements Initializable {
             benar.setDisable(false);
             salah.setVisible(true);
             salah.setDisable(false);
+        } else if (this.question.getType() == 3){
+            jawaban.setVisible(true);
+            jawaban.setDisable(false);
+            ajukanJawaban.setVisible(true);
+            ajukanJawaban.setDisable(false);
         }
         Main.questionNumber += 1;
 
@@ -134,6 +142,15 @@ public class gameScreenController implements Initializable {
 
     public void klikSalah(){
         if(this.question.getAnswer().equals("salah")){
+            System.out.println("correct answer");
+        } else {
+            System.out.println("wrong answer");
+        }
+        goToNext();
+    }
+
+    public void klikAjukanJawaban(){
+        if(this.jawaban.getText().replaceAll("\\s+","").equals(this.question.getAnswer())){
             System.out.println("correct answer");
         } else {
             System.out.println("wrong answer");
