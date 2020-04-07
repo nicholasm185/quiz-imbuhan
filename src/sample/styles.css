@@ -5,6 +5,7 @@
     -fx-primarytext : #B2B2B2;
     -fx-blue: #1976D2;
     -fx-red: #FF0000;
+    -fx-green: #0bff00;
     -fx-color-1:#1976D2;
 }
 
@@ -30,6 +31,24 @@
 .choice{
     -fx-text-fill: -fx-primary;
     -fx-background-color: -fx-secondary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14pt;
+}
+
+.benar{
+    -fx-text-fill: -fx-primary;
+    -fx-background-color: -fx-green;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14pt;
+}
+
+.salah{
+    -fx-text-fill: -fx-primary;
+    -fx-background-color: -fx-red;
     -fx-border-color: -fx-secondary;
     -fx-border-radius: 4px;
     -fx-background-radius: 4px;

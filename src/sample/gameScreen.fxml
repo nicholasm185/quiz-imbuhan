@@ -7,10 +7,12 @@
 <AnchorPane fx:id="gamePane" prefHeight="640.0" prefWidth="800.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gameScreenController">
    <children>
       <Button fx:id="kembali" layoutX="32.0" layoutY="47.0" mnemonicParsing="false" onAction="#klikKembali" text="Kembali" />
-      <Button fx:id="ch1" layoutX="143.0" layoutY="311.0" mnemonicParsing="false" onAction="#klikch1" prefHeight="101.0" prefWidth="186.0" styleClass="choice" text="Button" />
-      <Button fx:id="ch2" layoutX="472.0" layoutY="311.0" mnemonicParsing="false" onAction="#klikch2" prefHeight="101.0" prefWidth="186.0" styleClass="choice" text="Button" />
-      <Button fx:id="ch3" layoutX="143.0" layoutY="432.0" mnemonicParsing="false" onAction="#klikch3" prefHeight="101.0" prefWidth="186.0" styleClass="choice" text="Button" />
-      <Button fx:id="ch4" layoutX="472.0" layoutY="432.0" mnemonicParsing="false" onAction="#klikch4" prefHeight="101.0" prefWidth="186.0" styleClass="choice" text="Button" />
+      <Button fx:id="ch1" disable="true" layoutX="143.0" layoutY="311.0" mnemonicParsing="false" onAction="#klikch1" prefHeight="101.0" prefWidth="186.0" styleClass="choice" text="Button" visible="false" />
+      <Button fx:id="ch2" disable="true" layoutX="472.0" layoutY="311.0" mnemonicParsing="false" onAction="#klikch2" prefHeight="101.0" prefWidth="186.0" styleClass="choice" text="Button" visible="false" />
+      <Button fx:id="ch3" disable="true" layoutX="143.0" layoutY="432.0" mnemonicParsing="false" onAction="#klikch3" prefHeight="101.0" prefWidth="186.0" styleClass="choice" text="Button" visible="false" />
+      <Button fx:id="ch4" disable="true" layoutX="472.0" layoutY="432.0" mnemonicParsing="false" onAction="#klikch4" prefHeight="101.0" prefWidth="186.0" styleClass="choice" text="Button" visible="false" />
       <Label fx:id="questionLabel" layoutX="163.0" layoutY="172.0" prefHeight="71.0" prefWidth="475.0" styleClass="question" text="Label" />
+      <Button fx:id="benar" disable="true" layoutX="118.0" layoutY="320.0" mnemonicParsing="false" onAction="#klikBenar" prefHeight="128.0" prefWidth="236.0" styleClass="benar" text="Benar" visible="false" />
+      <Button fx:id="salah" disable="true" layoutX="447.0" layoutY="320.0" mnemonicParsing="false" onAction="#klikSalah" prefHeight="128.0" prefWidth="236.0" styleClass="salah" text="Salah" visible="false" />
    </children>
 </AnchorPane>

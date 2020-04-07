@@ -1,5 +1,3 @@
+2
 this is question number 1
-answer1
-answer2
-answer3
-answer4
+benar
