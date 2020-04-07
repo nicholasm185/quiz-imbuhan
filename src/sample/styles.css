@@ -27,12 +27,21 @@
     -fx-font-size: 12pt;
 }
 
+.choice{
+    -fx-text-fill: -fx-primary;
+    -fx-background-color: -fx-secondary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14pt;
+}
+
 .button:hover{
     -fx-border-color: -fx-secondary;
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-primary;
 }
 
-.button:active{
+.button:pressed{
     -fx-background-color: -fx-tertiary;
 }

@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
+
 public class Main extends Application {
 
 //    untuk menyimpan skor;
@@ -22,6 +24,10 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+//        File file = new File(".");
+//        for(String fileNames : file.list()) System.out.println(fileNames);
+        Question question = new Question();
+        System.out.println(question.getAnswer());
         launch(args);
     }
 }
