@@ -87,7 +87,7 @@ public class gameScreenController implements Initializable {
         } else{
             try {
                 Main.questionNumber = 1;
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("hasilScreen.fxml"));
                 gamePane.getChildren().setAll(pane);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -98,6 +98,7 @@ public class gameScreenController implements Initializable {
     public void klikch2(){
         if (ch2.getText().equals(this.question.getAnswer())){
             System.out.println("correct answer");
+            Main.jawabanBenar += 1;
         }else {
             System.out.println("wrong answer");
         }
@@ -107,6 +108,7 @@ public class gameScreenController implements Initializable {
     public void klikch3(){
         if (ch3.getText().equals(this.question.getAnswer())){
             System.out.println("correct answer");
+            Main.jawabanBenar += 1;
         }else {
             System.out.println("wrong answer");
         }
@@ -116,6 +118,7 @@ public class gameScreenController implements Initializable {
     public void klikch4(){
         if (ch4.getText().equals(this.question.getAnswer())){
             System.out.println("correct answer");
+            Main.jawabanBenar += 1;
         }else {
             System.out.println("wrong answer");
         }
@@ -125,6 +128,7 @@ public class gameScreenController implements Initializable {
     public void klikch1(){
         if (ch1.getText().equals(this.question.getAnswer())){
             System.out.println("correct answer");
+            Main.jawabanBenar += 1;
         }else {
             System.out.println("wrong answer");
         }
@@ -134,6 +138,7 @@ public class gameScreenController implements Initializable {
     public void klikBenar(){
         if(this.question.getAnswer().equals("benar")){
             System.out.println("correct answer");
+            Main.jawabanBenar += 1;
         }else {
             System.out.println("wrong answer");
         }
@@ -143,6 +148,7 @@ public class gameScreenController implements Initializable {
     public void klikSalah(){
         if(this.question.getAnswer().equals("salah")){
             System.out.println("correct answer");
+            Main.jawabanBenar += 1;
         } else {
             System.out.println("wrong answer");
         }
@@ -152,6 +158,7 @@ public class gameScreenController implements Initializable {
     public void klikAjukanJawaban(){
         if(this.jawaban.getText().replaceAll("\\s+","").equals(this.question.getAnswer())){
             System.out.println("correct answer");
+            Main.jawabanBenar += 1;
         } else {
             System.out.println("wrong answer");
         }

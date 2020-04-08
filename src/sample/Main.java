@@ -12,9 +12,9 @@ import java.util.Objects;
 public class Main extends Application {
 
 //    untuk menyimpan skor;
-    public static int skor;
     public static int numQuestions = 10;
     public static int questionNumber = 1;
+    public static int jawabanBenar = 0;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
