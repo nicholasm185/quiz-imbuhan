@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.scene.control.Alert;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -15,9 +17,8 @@ public class Question {
 
 
 
-    Question(int questionNo){
-        try {
-            List<String> allLines = Files.readAllLines(Paths.get("./src/assets/question"+questionNo+".txt"));
+    Question(int questionNo) throws IOException{
+            List<String> allLines = Files.readAllLines(Paths.get(Main.questionpath+"/question"+questionNo+".txt"));
             this.type = Integer.parseInt(allLines.get(0));
             this.question = allLines.get(1);
             if (this.type == 1){
@@ -33,10 +34,6 @@ public class Question {
                 this.answers.add(allLines.get(3));
                 this.answer = allLines.get(3);
             }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public int getType() {

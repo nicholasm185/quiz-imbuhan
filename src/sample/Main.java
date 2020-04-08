@@ -15,11 +15,12 @@ public class Main extends Application {
     public static int numQuestions = 10;
     public static int questionNumber = 1;
     public static int jawabanBenar = 0;
+    public static String questionpath;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Belajar Berimbuhan");
         primaryStage.setScene(new Scene(root, 800, 640));
         primaryStage.setResizable(false);
         primaryStage.show();
@@ -27,8 +28,8 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        numQuestions = Objects.requireNonNull(new File("./src/assets").list()).length;
-        System.out.println("no of questions: " + numQuestions);
+//        numQuestions = Objects.requireNonNull(new File("./src/assets").list()).length;
+//        System.out.println("no of questions: " + numQuestions);
 
         launch(args);
     }
