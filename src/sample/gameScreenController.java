@@ -35,8 +35,7 @@ public class gameScreenController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             this.question = new Question(Main.questionno.get(Main.questionNumber));
-            System.out.println(Main.questionno.get(Main.questionNumber));
-            this.progressBar.setProgress((float)Main.questionNumber/(float)Main.numQuestions);
+            this.progressBar.setProgress((float)(Main.questionNumber+1)/(float)Main.numQuestions);
             questionLabel.setText(this.question.getQuestion());
             if(this.question.getType() == 1){
                 List<String> ansList = this.question.getAnswers();
@@ -78,7 +77,7 @@ public class gameScreenController implements Initializable {
                 op2.setVisible(true);
                 op2.setDisable(false);
             }
-            Main.questionNumber += 1;
+                Main.questionNumber += 1;
         } catch (IOException e) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error");
@@ -110,7 +109,7 @@ public class gameScreenController implements Initializable {
     }
 
     public void goToNext(){
-        if (Main.questionNumber <= Main.numQuestions){
+        if ((Main.questionNumber) < Main.numQuestions){
             try {
                 AnchorPane pane = FXMLLoader.load(getClass().getResource("gameScreen.fxml"));
                 gamePane.getChildren().setAll(pane);
@@ -119,7 +118,7 @@ public class gameScreenController implements Initializable {
             }
         } else{
             try {
-                Main.questionNumber = 1;
+                Main.questionNumber = 0;
                 AnchorPane pane = FXMLLoader.load(getClass().getResource("hasilScreen.fxml"));
                 gamePane.getChildren().setAll(pane);
             } catch (IOException e) {

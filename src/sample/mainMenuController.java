@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.NoSuchFileException;
+import java.util.Collections;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -40,6 +41,10 @@ public class mainMenuController implements Initializable {
         Main.questionpath = file.getAbsolutePath();
 
         Main.numQuestions = Objects.requireNonNull(file.list()).length;
+        for(int i=1;i<=Main.numQuestions;i++){
+            Main.questionno.add(i);
+        }
+        Collections.shuffle(Main.questionno);
 
     }
 

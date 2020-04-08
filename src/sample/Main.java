@@ -16,7 +16,7 @@ public class Main extends Application {
 
 //    untuk menyimpan skor;
     public static int numQuestions = 10;
-    public static int questionNumber = 1;
+    public static int questionNumber = 0;
     public static int jawabanBenar = 0;
     public static String questionpath;
     public static List<Integer> questionno=new ArrayList<>();
@@ -28,10 +28,6 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 800, 640));
         primaryStage.setResizable(false);
         primaryStage.show();
-        for(int i=1;i<=numQuestions;i++){
-            questionno.add(i);
-        }
-        Collections.shuffle(questionno);
     }
 
 
