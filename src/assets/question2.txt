@@ -1,6 +1,4 @@
-1
-this is question number 2
-wrong answer
-wrong answer
-wrong answer
-correct answer
+4
+Pilihlah kata yang baku!
+Menyampingkan
+Mengesampingkan

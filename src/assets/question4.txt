@@ -1,4 +1,4 @@
 4
-this is a 2 choice question
-wrong answer
-correct answer
+Kata yang berarti bagian kota wilayah besar yang khusus digunakan untuk tempat tinggal penduduk adalah:
+Pemukiman
+Permukiman
