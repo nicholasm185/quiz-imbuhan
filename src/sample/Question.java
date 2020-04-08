@@ -28,6 +28,10 @@ public class Question {
                 this.answers.add(allLines.get(5));
             } else if (this.type == 2 || this.type == 3){
                 this.answer = allLines.get(2);
+            } else if(this.type == 4){
+                this.answers.add(allLines.get(2));
+                this.answers.add(allLines.get(3));
+                this.answer = allLines.get(3);
             }
 
         } catch (IOException e) {

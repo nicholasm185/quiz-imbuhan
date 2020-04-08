@@ -13,6 +13,16 @@
     -fx-background-color: -fx-primary;
 }
 
+.progress-bar > .bar {
+    -fx-background-insets: 1 1 2 1;
+    -fx-padding: 3px;
+}
+
+.progress-bar > .track {
+    -fx-text-box-border: -fx-primary;
+    -fx-control-inner-background: -fx-primary;
+}
+
 .nama-author{
     -fx-text-fill: rgb(255, 255, 255);
     -fx-font-size: 14px;

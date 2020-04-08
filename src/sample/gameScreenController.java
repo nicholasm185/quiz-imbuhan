@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
@@ -15,10 +16,13 @@ import java.util.*;
 
 public class gameScreenController implements Initializable {
 
-    @FXML public Button benar;
-    @FXML public Button salah;
-    @FXML public TextField jawaban;
-    @FXML public Button ajukanJawaban;
+    @FXML private ProgressBar progressBar;
+    @FXML private Button benar;
+    @FXML private Button salah;
+    @FXML private TextField jawaban;
+    @FXML private Button ajukanJawaban;
+    @FXML private Button op1;
+    @FXML private Button op2;
     @FXML private AnchorPane gamePane;
     @FXML private Button kembali;
     @FXML private Button ch1;
@@ -32,6 +36,7 @@ public class gameScreenController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        this.progressBar.setProgress((float)Main.questionNumber/(float)Main.numQuestions);
         this.question = new Question(Main.questionNumber);
         questionLabel.setText(this.question.getQuestion());
         if(this.question.getType() == 1){
@@ -62,6 +67,17 @@ public class gameScreenController implements Initializable {
             jawaban.setDisable(false);
             ajukanJawaban.setVisible(true);
             ajukanJawaban.setDisable(false);
+        } else if (this.question.getType() == 4){
+            List<String> ansList = this.question.getAnswers();
+            Collections.shuffle(ansList);
+
+            op1.setText(ansList.get(0));
+            op2.setText(ansList.get(1));
+
+            op1.setVisible(true);
+            op1.setDisable(false);
+            op2.setVisible(true);
+            op2.setDisable(false);
         }
         Main.questionNumber += 1;
 
@@ -71,6 +87,7 @@ public class gameScreenController implements Initializable {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
             gamePane.getChildren().setAll(pane);
+            Main.questionNumber -= 1;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -160,6 +177,26 @@ public class gameScreenController implements Initializable {
             System.out.println("correct answer");
             Main.jawabanBenar += 1;
         } else {
+            System.out.println("wrong answer");
+        }
+        goToNext();
+    }
+
+    public void klikop1(){
+        if (this.op1.getText().equals(this.question.getAnswer())){
+            System.out.println("correct answer");
+            Main.jawabanBenar += 1;
+        }else {
+            System.out.println("wrong answer");
+        }
+        goToNext();
+    }
+
+    public void klikop2(){
+        if (this.op2.getText().equals(this.question.getAnswer())){
+            System.out.println("correct answer");
+            Main.jawabanBenar += 1;
+        }else {
             System.out.println("wrong answer");
         }
         goToNext();
