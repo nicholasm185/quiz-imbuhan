@@ -7,6 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
 public class Main extends Application {
@@ -16,6 +19,7 @@ public class Main extends Application {
     public static int questionNumber = 1;
     public static int jawabanBenar = 0;
     public static String questionpath;
+    public static List<Integer> questionno=new ArrayList<>();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -24,6 +28,10 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 800, 640));
         primaryStage.setResizable(false);
         primaryStage.show();
+        for(int i=1;i<=numQuestions;i++){
+            questionno.add(i);
+        }
+        Collections.shuffle(questionno);
     }
 
 

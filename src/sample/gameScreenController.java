@@ -34,7 +34,8 @@ public class gameScreenController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            this.question = new Question(Main.questionNumber);
+            this.question = new Question(Main.questionno.get(Main.questionNumber));
+            System.out.println(Main.questionno.get(Main.questionNumber));
             this.progressBar.setProgress((float)Main.questionNumber/(float)Main.numQuestions);
             questionLabel.setText(this.question.getQuestion());
             if(this.question.getType() == 1){

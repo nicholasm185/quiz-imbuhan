@@ -7,7 +7,10 @@
 <AnchorPane fx:id="tentangPane" prefHeight="640.0" prefWidth="800.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tentangKamiController">
    <children>
       <ImageView fitHeight="181.0" fitWidth="140.0" layoutX="73.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="nmhPic" fitHeight="181.0" fitWidth="140.0" layoutX="244.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="nmhPic" fitHeight="181.0" fitWidth="140.0" layoutX="244.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/nmh.jpg" />
+         </image></ImageView>
       <ImageView fitHeight="181.0" fitWidth="140.0" layoutX="425.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="181.0" fitWidth="140.0" layoutX="607.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="69.0" layoutY="429.0" prefHeight="127.0" prefWidth="115.0" styleClass="nama-author" text="Millen Dwiputra" />
