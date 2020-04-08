@@ -23,18 +23,6 @@ public class tentangKamiController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-
-//            NMH Picture
-            FileInputStream input1 = new FileInputStream("./src/pictures/nmh.jpg");
-            Image image = new Image(input1);
-            nmhPic.setImage(image);
-
-//            TODO: INSERT YOUR PICTURE HERE
-        } catch (FileNotFoundException e) {
-            System.out.println("some pictures were not found");
-        }
-
 
     }
 
