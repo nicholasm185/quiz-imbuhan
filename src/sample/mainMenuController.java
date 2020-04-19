@@ -38,13 +38,23 @@ public class mainMenuController implements Initializable {
 
         File file = directoryChooser.showDialog(stage);
 
-        Main.questionpath = file.getAbsolutePath();
+        try {
+            Main.questionpath = file.getAbsolutePath();
 
-        Main.numQuestions = Objects.requireNonNull(file.list()).length;
-        for(int i=1;i<=Main.numQuestions;i++){
-            Main.questionno.add(i);
+            Main.numQuestions = Objects.requireNonNull(file.list()).length;
+            for(int i=1;i<=Main.numQuestions;i++){
+                Main.questionno.add(i);
+            }
+            Collections.shuffle(Main.questionno);
+        } catch (NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText("Soal-soal tidak ditemukan!");
+            alert.setContentText("Mohon untuk memilih folder berisi soal-soal");
+
+            alert.showAndWait();
         }
-        Collections.shuffle(Main.questionno);
+
 
     }
 

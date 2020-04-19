@@ -78,7 +78,7 @@ public class gameScreenController implements Initializable {
                 op2.setDisable(false);
             }
                 Main.questionNumber += 1;
-        } catch (IOException e) {
+        } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error");
             alert.setHeaderText("Soal-soal tidak ditemukan!");
