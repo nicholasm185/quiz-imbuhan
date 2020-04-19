@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainMenuController">
+   <children>
+      <Button fx:id="tentangKami" layoutX="558.0" layoutY="24.0" mnemonicParsing="false" onAction="#klikTentangKami" stylesheets="@styles.css" text="Tentang Kami" />
+      <Button fx:id="mulai" layoutX="353.0" layoutY="463.0" mnemonicParsing="false" onAction="#klikMulai" text="Mulai Kuis" />
+      <Button fx:id="bantuan" layoutX="689.0" layoutY="24.0" mnemonicParsing="false" onAction="#klikBantuan" text="Bantuan" />
+      <Button fx:id="muatPertanyaan" layoutX="53.0" layoutY="569.0" mnemonicParsing="false" onAction="#klikMuatPertanyaan" text="Muat Pertanyaan" />
+   </children>
+</AnchorPane>
