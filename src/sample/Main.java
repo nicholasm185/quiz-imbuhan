@@ -28,6 +28,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 800, 640));
         primaryStage.setResizable(false);
         primaryStage.show();
+        System.out.println(new File(".").getAbsolutePath());
     }
 
 

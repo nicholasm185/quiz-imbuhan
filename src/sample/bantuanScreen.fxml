@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane fx:id="bantuanPane" prefHeight="640.0" prefWidth="800.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.bantuanController">
+<AnchorPane fx:id="bantuanPane" prefHeight="640.0" prefWidth="800.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.bantuanController">
    <children>
       <Button fx:id="kembali" layoutX="43.0" layoutY="56.0" mnemonicParsing="false" onAction="#klikKembali" text="Kembali" />
+      <Button fx:id="caraMembuatSoal" layoutX="290.0" layoutY="377.0" mnemonicParsing="false" onAction="#tutorialMembuatSoal" prefHeight="39.0" prefWidth="221.0" text="Cara membuat Soal" />
+      <Button fx:id="CaraMenggunakan" layoutX="290.0" layoutY="209.0" mnemonicParsing="false" onAction="#tutorialMenggunakan" text="Cara Menggunakan Aplikasi" />
+      <Pane fx:id="caraMenggunakan" layoutX="22.0" layoutY="16.0" prefHeight="608.0" prefWidth="756.0" style="-fx-background-color: lightgray;" visible="false">
+         <children>
+            <Button fx:id="next" layoutX="613.0" layoutY="546.0" mnemonicParsing="false" onAction="#next" text="Berikutnya" />
+            <Button fx:id="prev" layoutX="55.0" layoutY="546.0" mnemonicParsing="false" onAction="#prev" text="Kembali" />
+            <ImageView fx:id="caraMenggunakanImg" fitHeight="500.0" fitWidth="600.0" layoutX="79.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="Tutup" layoutX="705.0" layoutY="11.0" mnemonicParsing="false" onAction="#tutup" text="X" />
+         </children>
+      </Pane>
+      <Pane fx:id="membuatSoal" layoutX="32.0" layoutY="26.0" prefHeight="608.0" prefWidth="756.0" style="-fx-background-color: lightgray;" visible="false">
+         <children>
+            <Button fx:id="next1" layoutX="613.0" layoutY="546.0" mnemonicParsing="false" onAction="#next" text="Berikutnya" />
+            <Button fx:id="prev1" layoutX="55.0" layoutY="546.0" mnemonicParsing="false" onAction="#prev" text="Kembali" />
+            <ImageView fx:id="membuatPertanyaanimg" fitHeight="500.0" fitWidth="600.0" layoutX="79.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="Tutup1" layoutX="705.0" layoutY="11.0" mnemonicParsing="false" onAction="#tutup" text="X" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
