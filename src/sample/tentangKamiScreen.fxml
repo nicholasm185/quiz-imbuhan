@@ -16,7 +16,10 @@
             <Image url="@../pictures/nmh.jpg" />
          </image></ImageView>
 
-      <ImageView fitHeight="181.0" fitWidth="140.0" layoutX="425.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="199.0" fitWidth="151.0" layoutX="416.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/Nico.JPG" />
+         </image></ImageView>
       <ImageView fitHeight="181.0" fitWidth="140.0" layoutX="604.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../pictures/1529315747667.jpg" />
@@ -29,6 +32,6 @@
       <Label layoutX="277.0" layoutY="510.0" styleClass="nama-author" text="2201798761" />
       <Label layoutX="76.0" layoutY="510.0" styleClass="nama-author" text="2201797531" />
       <Label layoutX="643.0" layoutY="510.0" styleClass="nama-author" text="2201798736" />
-      <Label layoutX="454.0" layoutY="510.0" styleClass="nama-author" text="NIM" />
+      <Label layoutX="454.0" layoutY="510.0" styleClass="nama-author" text="2201798446" />
    </children>
 </AnchorPane>
